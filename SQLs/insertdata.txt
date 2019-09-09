@@ -1,0 +1,27 @@
+INSERT INTO suppliers_tbl
+   (   supplier_name ,
+   supplier_address ,
+   supplier_add_date ,
+   supplier_logo )
+   VALUES
+   ("TUVIDA", "Johns Beek", today(), LOAD_FILE("C:\TrackMyBhindi\skid\images\suppliers\supp1.jpg"));
+
+UPDATE supplierss_tbl 
+   SET supplier_logo = LOAD_FILE("C:\TrackMyBhindi\skid\images\suppliers\supp1.jpg") 
+   WHERE supplier_id = 1;
+
+INSERT INTO suppliers_tbl
+   (   supplier_name ,
+   supplier_address ,
+   supplier_add_date ,
+   supplier_logo )
+   VALUES
+   ("PATOL", "Alpharetta", CURRENT_DATE(), LOAD_FILE("C:\TrackMyBhindi\skid\images\suppliers\supp2.jpg"));
+
+INSERT INTO suppliers_tbl
+   (   supplier_name ,
+   supplier_address ,
+   supplier_add_date ,
+   supplier_logo )
+   VALUES
+   ("SAI", "Cumming", CURRENT_DATE(), LOAD_FILE("C:\TrackMyBhindi\skid\images\suppliers\supp3.jpg"));
